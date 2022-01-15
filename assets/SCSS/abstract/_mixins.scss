@@ -25,3 +25,9 @@ $break-points-down: (
     @content;
   }
 }
+
+@mixin animation($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}

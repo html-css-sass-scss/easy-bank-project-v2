@@ -49,6 +49,23 @@ button {
 .header {
   padding: 1.7rem 2.4rem;
 }
+.header.open #hamburgerBtn span {
+  background-color: transparent;
+}
+.header.open #hamburgerBtn span:before {
+  transform: translateY(0.6rem) rotate(45deg);
+}
+.header.open #hamburgerBtn span:after {
+  transform: translateY(-0.6rem) rotate(-45deg);
+}
+.header .overlay {
+  position: fixed;
+  background-image: linear-gradient(#2d314d, transparent);
+  top: 6rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 .header__logo img {
   width: 14.1rem;
   height: 2.2rem;
@@ -75,15 +92,6 @@ button {
 }
 .header__hamburger-menu span:after {
   bottom: -0.6rem;
-}
-.header__hamburger-menu:hover span {
-  background-color: transparent;
-}
-.header__hamburger-menu:hover span:before {
-  transform: translateY(0.6rem) rotate(45deg);
-}
-.header__hamburger-menu:hover span:after {
-  transform: translateY(-0.6rem) rotate(-45deg);
 }
 .header__list li:not(:last-child) {
   padding-right: 3.2rem;
@@ -150,6 +158,42 @@ button {
   .hide-for-desktop {
     display: none;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out forwards;
 }
 
 /*# sourceMappingURL=style.css.map */
