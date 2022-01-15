@@ -1,0 +1,40 @@
+/******************/
+/*global reset*/
+/******************/
+
+@use "../abstract" as v;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: v.$font-family;
+  font-size: v.$font-md;
+  color: v.$grayishBlue;
+  line-height: 1.3;
+}
+
+a {
+  &,
+  &:visited,
+  &:focus,
+  &:active,
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+ul {
+  list-style: none;
+}

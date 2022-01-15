@@ -1,0 +1,16 @@
+/******************/
+/*helper classes*/
+/******************/
+@use "../abstract" as v;
+
+.hide-for-mobile {
+  @include v.breakpoint-down("md") {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include v.breakpoint-up("lg") {
+    display: none;
+  }
+}

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "sass:compile": "sass --watch assets/SCSS/styles.scss assets/css/styles.css"
+    "sass:compile": "sass --watch assets/SCSS/style.scss assets/css/style.css"
   },
   "devDependencies": {
     "browser-sync": "^2.27.7",
